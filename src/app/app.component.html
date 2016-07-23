@@ -6,9 +6,16 @@
 </header>
 <main>
   <h1 class="title">Hello from {{api.title}}!</h1>
+  <h4>Pick a highlight color</h4>
+  <div>
+    <input type="radio" name="colors" (click)="color = 'lightgreen'">Green
+    <input type="radio" name="colors" (click)="color = 'yellow'">Yellow
+    <input type="radio" name="colors" (click)="color = 'cyan'">Cyan
+  </div>
 
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/angular.png">
+  <input type="text" [myHighlight]="color" value="{{color}}">
+  <p [myHighlight]="color">Highlight me!</p>
+  <p [myHighlight]="color" [defaultColor]="'violet'">Highlight me too!</p>
 
   <router-outlet></router-outlet>
 </main>

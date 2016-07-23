@@ -3,6 +3,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { ApiService } from './shared';
 
+import { HighlightDirective } from './attribute-directives/highlight.directive';
+
 import '../style/app.scss';
 
 /*
@@ -12,7 +14,7 @@ import '../style/app.scss';
 @Component({
   selector: 'my-app', // <my-app></my-app>
   providers: [ApiService],
-  directives: [...ROUTER_DIRECTIVES],
+  directives: [...ROUTER_DIRECTIVES, HighlightDirective],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
