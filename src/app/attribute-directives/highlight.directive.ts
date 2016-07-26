@@ -11,9 +11,11 @@ export class HighlightDirective {
         this.el = el.nativeElement;
     }
 
-    @Input()
+    @Input('myDefaultColor')
     set defaultColor(colorName: string) {
         this._defaultColor = colorName || this._defaultColor;
+        console.log('updating color: ' + colorName);
+        this.highlight(colorName);
     }
 
     @Input('myHighlight')

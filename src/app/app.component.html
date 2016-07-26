@@ -5,7 +5,7 @@
   </nav>
 </header>
 <main>
-  <h1 class="title">Hello from {{api.title}}!</h1>
+  <!--<h1 class="title">Hello from {{api.title}}!</h1>-->
   <h4>Pick a highlight color</h4>
   <div>
     <input type="radio" name="colors" (click)="color = 'lightgreen'">Green
@@ -14,8 +14,25 @@
   </div>
 
   <input type="text" [myHighlight]="color" value="{{color}}">
+  
   <p [myHighlight]="color">Highlight me!</p>
-  <p [myHighlight]="color" [defaultColor]="'violet'">Highlight me too!</p>
+  <p [myHighlight]="color" [myDefaultColor]="'violet'">Highlight me too!</p>
+
+
+<div>
+    <input type="radio" name="length" (click)="length = 6">6
+    <input type="radio" name="length" (click)="length = 8">8
+    <input type="radio" name="length" (click)="length = 10">10
+  </div>
+  
+  <input type="text" [passwordGenerator]="" [passwordLength]="length">
+  <div>
+    value: {{value}}
+  </div>
+  <div>
+    length: {{length}}
+  </div>
+  
 
   <router-outlet></router-outlet>
 </main>
