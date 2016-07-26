@@ -6,7 +6,19 @@
 </header>
 <main>
   <!--<h1 class="title">Hello from {{api.title}}!</h1>-->
-  <h4>Pick a highlight color</h4>
+  <div class="container content">
+    <form role="form">
+      <h2>Options</h2>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox">Uppercase characters
+        </label>
+      </div>
+    </form>
+  </div>
+
+
+  <!--<h4>Pick a highlight color</h4>
   <div>
     <input type="radio" name="colors" (click)="color = 'lightgreen'">Green
     <input type="radio" name="colors" (click)="color = 'yellow'">Yellow
@@ -31,8 +43,8 @@
   </div>
   <div>
     length: {{length}}
-  </div>
-  
+  </div>-->
+
 
   <router-outlet></router-outlet>
 </main>
